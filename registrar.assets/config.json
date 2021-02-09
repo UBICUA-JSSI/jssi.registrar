@@ -1,0 +1,24 @@
+{
+    "drivers": [
+        {
+            "id": "btcr",
+            "image": "universalregistrar/driver.btcr",
+            "imageProperties": "true",
+            "tag": "latest"
+        }, {
+            "id": "sov",
+            "image": "universalregistrar/driver.sov",
+            "imageProperties": "true",
+            "tag": "latest"
+        }, {
+            "id": "v1",
+            "image": "universalregistrar/driver.v1",
+            "imageProperties": "true",
+            "tag": "latest"
+        }, {
+            "id": "key",
+            "image": "universalregistrar/driver.key",
+            "tag": "latest"
+        }
+    ]
+}
