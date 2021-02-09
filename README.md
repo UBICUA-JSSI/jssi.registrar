@@ -1,1 +1,1 @@
-# registrat
+# registrar
