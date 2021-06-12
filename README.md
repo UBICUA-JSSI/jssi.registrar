@@ -1,4 +1,4 @@
-# JSSI Registrar
+# JSSI Registrar Server
 Java web application forked from [DIF Universal Registrar](https://github.com/decentralized-identity/universal-registrar)
 
 JSSI Registrar is aimed at registering decentralized identities. To include different storage systems, the driver-based architecure is used. The default sovrin driver provides access to [Hyperledger Indy DLT](https://github.com/hyperledger/indy-sdk).
