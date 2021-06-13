@@ -1,18 +1,22 @@
-# JSSI Registrar Server
+# JSSI Registration Server
 Java web application forked from [DIF Universal Registrar](https://github.com/decentralized-identity/universal-registrar)
+
+## Description
 
 JSSI Registrar is aimed at registering decentralized identities. To include different storage systems, the driver-based architecure is used. The default sovrin driver provides access to [Hyperledger Indy DLT](https://github.com/hyperledger/indy-sdk).
 
-## Prerequisites
+## Quick start
+
+### Prerequisites
 - Apache Netbeans 12+
 - Open JDK 15+
 - Wildfly 21+
 
-## Dependencies
+### Dependencies
 - registrar.lib
 - hyperledger.lib
 
-## Configuration
+### Configuration
 The configuration directory is specified in the <install_dir>/resolver/registrar.web/src/main/webapp/WEB-INF/web.xml:
 ```
 <context-param>
@@ -43,7 +47,7 @@ endorser.verkey=GJ1SzoWzavQYfNL9XkaJdrQejfztN4XqdsiV4ct3LXKL
 ```
 For testing purposes, the Registrar DID has the assigned value of V4SGRU86Z58d6TV7PBUe6f. It means that the Registrar wallet contains the necessary cryptographic material to sign their requests to DLT. Before testing, it is necessary to check if the wallet has been created and the Resolver DID has been registered.
 
-## Logging
+### Logging
 To enable the logging in Wildfly, open <wildfly_install_dir>/standalone/configuration/standalone-full.xml and modify 
 profile/subsystem xmlns="urn:jboss:domain:logging:8.0" as follows:
 ```
@@ -52,7 +56,7 @@ profile/subsystem xmlns="urn:jboss:domain:logging:8.0" as follows:
  </logger>
  ```
 
-## Execution
+### Testing
 Compile and deploy the registrar.ear archive. The JSSI Registrar server plays the role of endorser, that is why a client application needs to access to the server and to register a DID signed by the client. To test this functionality, use the jssi.client/registar.client package.
 
 
